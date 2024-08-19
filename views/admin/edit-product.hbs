@@ -1,0 +1,29 @@
+<form action="/admin/edit-product?id={{product._id}}" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="productName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="productName" name="productName" value="{{product.productName}}" placeholder="Enter product name" required>
+    </div>
+    <div class="mb-3">
+        <label for="productCategory" class="form-label">Category</label>
+        <input type="text" class="form-control" id="productCategory" name="productCategory" value="{{product.productCategory}}" placeholder="Enter product category" required>
+    </div>
+    <div class="mb-3">
+        <label for="productDescription" class="form-label">Description</label>
+        <input type="text" class="form-control" id="productDescription" name="productDescription" value="{{product.productDescription}}" rows="3"   placeholder="Enter product description" required></textarea>
+    </div>
+    <div class="mb-3">
+        <img src="/product-images/{{product._id}}.jpg" style="width: 100px; height: 100px;" id="imgView">
+        <input type="file" class="form-control" id="fileUpload" name="fileUpload" onchange="viewImage(event)">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script>
+  function viewImage(event) {
+    const imgView = document.getElementById('imgView');
+    imgView.src = URL.createObjectURL(event.target.files[0]);
+  }
+</script>
+
+
+<!-- ithth edit update cheyyanulla data ann  --> 

@@ -1,0 +1,33 @@
+<form action="/logindata" method="post">
+{{#if loginErr}}
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+                <p style="color: red;">email is invalid</p>
+
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+                <p style="color : red;">paswword is invalid</p>
+
+    </div>
+    <div>
+        <button type="submit">Login</button>
+    </div>
+{{else}}
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+    <div>
+        <button type="submit">Login</button>
+    </div>
+{{/if}}
+</form>
+
+<p>Don't have an account? <a href="/signup">Create Account</a></p>

@@ -1,0 +1,17 @@
+<!-- user call --> 
+<section>
+    <div class="container" style="display: flex; margin-top:50px">
+        {{#each products}}
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="/product-images/{{this._id}}.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{this.productName}}</h5>
+    <p class="card-text">{{this.productCategory}}</p>
+    <a href="/" class="btn btn-primary">{{this.productDescription}}</a>
+        <a href="/addcart?id={{this._id}}" class="btn btn-primary">{{this.productPrice}}</a>
+
+  </div>
+</div>
+{{/each}}                               <!-- // ithh user router te kayill nin varune -->   
+</div>
+</section>
